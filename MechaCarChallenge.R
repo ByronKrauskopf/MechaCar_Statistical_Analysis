@@ -14,4 +14,14 @@ Suspension_coil <- read.csv(file='Suspension_Coil.csv', check.names=F, stringsAs
 
 total_summary <- Suspension_coil %>% summarize(Mean = mean(PSI), Median = median(PSI), Variance = var(PSI), SD = sd(PSI)) #summary dataframe
 
-lot_summary <- Suspension_coil %>% group_by(Manufacturing_Lot) %>% summarize(Mean = mean(PSI), Median = median(PSI), Variance = var(PSI), SD = sd(PSI), .groups = 'keep') #create lot summaries
+lot_summary <- Suspension_coil %>% group_by(Manufacturing_Lot) %>% summarize(Mean = mean(PSI), Median = median(PSI), Variance = var(PSI), SD = sd(PSI), .groups = 'keep') #lot summaries
+
+#Deliverable 3
+
+t.test(Suspension_coil$PSI, mu=1500) #t-test with pop mean of 1500
+
+t.test(subset(Suspension_coil,Manufacturing_Lot=="Lot1")$PSI, mu = 1500) #t-test lot 1
+
+t.test(subset(Suspension_coil,Manufacturing_Lot=="Lot2")$PSI, mu = 1500) #t-test lot 2
+
+t.test(subset(Suspension_coil,Manufacturing_Lot=="Lot3")$PSI, mu = 1500) #t-test lot 3
