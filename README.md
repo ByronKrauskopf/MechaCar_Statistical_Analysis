@@ -1,5 +1,4 @@
 # MechaCar_Statistical_Analysis
-Module 15
 
 ## Linear Regression to Predict MPG
 
@@ -8,13 +7,13 @@ Module 15
 ![Deliverable 1 Summary](/images/deliverable_1_summary.png)
 
 1) Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset? 
-- 
+Vehicle weight, spoiler angle, and AWD provided a non-random amount of variance. The two variables that had the most amount of random variance are ground clearance and vehicle length.
 
 2) Is the slope of the linear model considered to be zero? Why or why not?
-- 
+The slope is not zero. This is based on the p-value, 5.35e-11, which is far less than even an extreme significane level of 0.0001. This means that we can reject the null hypthothesis. 
 
 3) Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
-
+This linear model has an r-squared value of 0.7149, which means that approximately 71% of all mpg predictions will be determined by this model. This indicates that it is an effective prediction model. 
 
 ## Summary Statistics on Suspension Coils
 
